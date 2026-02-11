@@ -1,1 +1,51 @@
+body {
+  background: #0f172a;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.gauge-container {
+  margin-top: 50px;
+}
+
+.gauge {
+  width: 300px;
+  height: 150px;
+  background: conic-gradient(
+    red 0deg 60deg,
+    orange 60deg 120deg,
+    yellow 120deg 180deg,
+    lightgreen 180deg 240deg,
+    green 240deg 300deg
+  );
+  border-radius: 300px 300px 0 0;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+}
+
+.gauge-fill {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: #0f172a;
+  border-radius: 50%;
+  top: 75px;
+  left: 0;
+  transform-origin: center;
+  transform: rotate(0deg);
+  transition: transform 1s ease-out;
+}
+
+.gauge-cover {
+  position: absolute;
+  top: 60px;
+  width: 100%;
+}
+
+#score {
+  font-size: 40px;
+  font-weight: bold;
+}
 
